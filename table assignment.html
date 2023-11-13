@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+    <style>
+        body{
+            direction: rtl;
+        }
+        table, td, th{
+            border: 1px solid black;
+            
+        }
+        table{
+            width: 400px;
+            height: 200px;
+            text-align: center;
+            /* margin: 0px auto; 
+            برای اینکه کدمان به وسط صفحه جا به جا شود میتوانیم از این کد استفاده کنیم
+            */
+        }
+        thead{
+            background-color: aquamarine;
+        }
+        tfoot{
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <table>
+
+        <thead>
+            <tr>
+                <th>نام</th>
+                <th>نام خانوادگی</th>
+                <th>موبایل</th>
+                <th> ش.ش</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr >
+                <td>علیرضا</td>
+                <td>حیدری</td>
+                <td>09915546965</td>
+                <td>4281556945</td>
+            </tr>
+            <tr>
+                <td>محمد</td>
+                <td>مرادی</td>
+                <td rowspan="2"><p>09914567892 <br>02433456589 </p></td>
+                <td>4284776030</td>
+            </tr>
+            <tr>
+                <td rowspan="2" colspan="2"> سید ابوافضل محمدی راد</td>
+                <td> 5897266339</td>
+            </tr>
+            <tr>
+                <td>09191425696</td>
+                <td>123</td>
+            </tr>
+        </tbody>
+            <tfoot>
+                <tr>
+                    <td>lklasdjklf'ja'lk</td>
+                    <td>'ksaj'df'laj</td>
+                    <td>'asjdfljalk</td>
+                    <td>oiasjdiofjaoj</td>
+                </tr>
+            </tfoot>
+        
+    </table>
+</body>
+</html>
