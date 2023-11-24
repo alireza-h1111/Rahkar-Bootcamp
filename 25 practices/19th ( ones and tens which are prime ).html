@@ -1,0 +1,38 @@
+<html>
+
+    <SCRipt>
+
+        function prime(num) {
+            if (num <= 1){
+                return false;
+            }
+            if (num == 2){
+                return true;
+            }
+            for (let i = 2; i <= num/2; i++) {
+                if (num % i == 0){
+                    return false;
+                }
+                
+            }
+            return true;
+        }
+
+        function threeDigitNumbers() {
+        for (let i = 100; i <=999 ; i++) {
+
+            let hundreds = Math.floor(i / 100);
+            let ones = i % 10;
+
+            if (prime(hundreds) && prime(ones)) {
+                console.log(i);;
+            }
+        }
+        }   
+
+        threeDigitNumbers();
+
+
+    </SCRipt>
+
+</html>

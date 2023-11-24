@@ -1,0 +1,21 @@
+<html>
+
+    <script>
+
+        function CountignDigits(input) {
+            let Counter = 0;
+            while (input != 0) {
+                input = Math.floor(input / 10);
+                Counter++;
+            }
+            return Counter;
+        }
+        var result= 0;
+        let Yournumber =parseInt( prompt("Enter your number:"));
+        result= CountignDigits(Yournumber);
+        console.log(result);
+
+
+    </script>
+
+</html>

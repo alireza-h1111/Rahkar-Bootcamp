@@ -1,0 +1,34 @@
+<html>
+
+    <script>
+
+        function findNumbers() {
+
+            for (let a = 10; a <= 1500; a++) {
+                for (let b = a + 1; b <= 1500; b++) {
+                    let sumA = 0;
+                    let sumB = 0;
+                    for (let i = 1; i < a; i++) {
+                            if (a % i == 0) {
+                            sumA += i;
+                            }
+                    }
+
+                    for (let j = 1; j < b; j++) {
+                        if (b % j == 0) {
+                        sumB += j;
+                        }
+                    }
+
+                    if (sumA == b && sumB == a) {
+                        console.log(a +" and "+ b +" are the numbers that satisfy the condition");
+                    }
+                    
+                }
+            }
+        }
+        findNumbers();
+
+    </script>
+
+</html>

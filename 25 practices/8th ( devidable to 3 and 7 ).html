@@ -1,0 +1,26 @@
+<html>
+
+    <script>
+
+        function NumbersDevidableTo3and7() {
+        var numbers = [];
+        var count = 0;
+        var sum = 0;
+        for (let i = 1; i <= 300; i++) {
+            if (i % 3 == 0 && i % 7 == 0) {
+            numbers.push(i);
+            count++;
+            sum += i;
+            }
+        }
+        console.log("Devidable numbers to 7 and 3: " + numbers);
+        console.log("The number of these numbers: " + count);
+        console.log("The Sumation of these numbers: " + sum);
+        }
+
+        NumbersDevidableTo3and7();
+
+
+    </script>
+
+</html>

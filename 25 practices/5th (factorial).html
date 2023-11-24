@@ -1,0 +1,19 @@
+<html>
+
+    <script>
+        let Yournumber =parseInt( prompt("Enter your number:"));
+        function factorial(num) {
+        if (num == 0 || num == 1)
+            return 1;
+        for (var i = num - 1; i >= 1; i--) {
+            num *= i;
+        }
+        return num;
+        }
+        var result = factorial(Yournumber);
+        console.log("factorial of entered number is: " , result);
+
+
+    </script>
+
+</html>

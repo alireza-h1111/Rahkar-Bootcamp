@@ -1,0 +1,25 @@
+<html>
+    <script>
+
+        function CountSum(){
+            let myArray= [];
+            let count = 0;
+            let sum = 0;
+    
+            for (let i = 0; i < 5; i++) {
+                let Yournumber =parseInt( prompt("Enter your number:"));
+                myArray.push(Yournumber);
+                if (Yournumber > 0) {
+                count++;
+                } else {
+                sum = sum + Yournumber;
+                }
+            }
+    
+            return console.log("Number of positive numbers:",count),
+            console.log("Sum of negative numbers: ",sum);
+        }
+
+        CountSum();
+    </script>
+</html>

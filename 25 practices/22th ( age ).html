@@ -1,0 +1,18 @@
+<html>
+
+    <script>
+
+      let ( JalaliDate ) = require('jalali-js');
+
+      let year = parseInt(prompt("سال را وارد کنید: "));
+      let month = parseInt(prompt("ماه را وارد کنید: "));
+      let day = parseInt(prompt("روز را وارد کنید: "));
+
+      let current_date = new JalaliDate(year, month, day);
+      let next_date = current_date.addDays(1);
+
+      console.log("تاریخ روز بعد به شمسی: ", next_date);
+
+    </script>
+
+</html>

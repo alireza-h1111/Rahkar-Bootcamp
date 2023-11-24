@@ -1,0 +1,23 @@
+ <html>
+
+    <script>
+
+        function OnesTensHundreds(number) {
+
+            let hundreds = Math.floor(number / 100);
+            console.log("100: " + hundreds);
+
+            let tens = Math.floor((number % 100) / 10);
+            console.log("10: " + tens);
+
+            let ones = number % 10;
+            console.log("1: " + ones);
+
+            }
+
+        let Yournumber= parseInt( prompt("Enter your number: "));
+        OnesTensHundreds(Yournumber);
+
+    </script>
+
+ </html>

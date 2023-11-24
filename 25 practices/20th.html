@@ -1,0 +1,28 @@
+<html>
+
+    <script>
+
+        function FindingSituation(number1) {
+            let sum = 0;
+            for (let i = 1; i <= number1 / 2; i++) {
+                if (number1 % i == 0) {
+                sum += i;
+                }
+            }
+            return sum == number1; 
+        }
+
+        function findNumbers() {
+            for (let i = 1; i <1000; i++) {
+                if (FindingSituation(i)) {
+                console.log(i);
+                }
+            }
+        }
+
+        findNumbers();
+
+
+    </script>
+
+</html>
