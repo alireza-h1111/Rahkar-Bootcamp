@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <a class="navbar-brand" [routerLink] ="['/home']">Home</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav mr-auto">
+        
+        <li class="nav-item active">
+          <a class="nav-link" [routerLink]="['/home/product']">products</a>
+        </li>
+         <li class="nav-item"  *ngIf="!loginService.isLogin">
+           <a class="nav-link" [routerLink]="['/register'] "> sign in</a>
+         </li>
+         <li class="nav-item"  *ngIf="loginService.isLogin">
+          <a class="nav-link" [routerLink]="['/profile'] ">profile</a>
+        </li>
+        
+      </ul>
+    </div>
+  </nav>
