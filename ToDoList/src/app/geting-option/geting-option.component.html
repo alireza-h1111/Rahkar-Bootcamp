@@ -1,0 +1,8 @@
+<div class="d-flex flex-row align-items-center container rounded border border-primary shadow p-3 mb-2 mt-2 p-3 w-50">
+    <input (input)="GettingListOption($event)" type="text" class="form-control form-control-lg" id="exampleFormControlInput1"
+      placeholder="Add new...">
+    <a href="#!" data-mdb-toggle="tooltip" title="Set due date"><i
+        class="fas fa-calendar-alt fa-lg me-3"></i></a>
+    <div>
+      <button type="button" (click)="sendingListOptionByclicking($event)" class="btn btn-primary width-50"> Create </button>
+</div>

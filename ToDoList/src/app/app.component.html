@@ -1,0 +1,5 @@
+<div class="wholePage">
+    <app-header></app-header>
+    <app-geting-option (sendingListOption)="gettingOption($event)" ></app-geting-option>
+    <app-body [gettingOption]="gottenOption" ></app-body>
+</div>
