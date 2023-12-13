@@ -1,0 +1,36 @@
+<html>
+    <script>
+                
+        function FindingIntendedNumber() {
+
+        let hundredsAndThousands ;
+        let tensAndUnit ;
+        let outcome;
+
+        for (let n = 1000; n < 9999; n++) {
+
+            hundredsAndThousands = Math.floor(n / 100);
+            tensAndUnit = Math.floor(n % 100); 
+
+            outcome = condition(hundredsAndThousands, tensAndUnit)
+
+            if (outcome === n) {
+                console.log(n);
+            }
+            
+        }
+        }
+
+
+        function condition(a , b) {
+
+            let ResultSum = a + b;
+            let ResultMultiplation = ResultSum*ResultSum;
+            return ResultMultiplation;
+
+        }
+
+        FindingIntendedNumber();
+
+    </script>
+</html>

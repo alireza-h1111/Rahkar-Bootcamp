@@ -1,0 +1,41 @@
+<html>
+    <script>
+        let Yournumbers =[];
+        for (let i = 0; i <5 ; i++) {
+            a=i+1;
+            
+            let b = parseInt( prompt("Enter your" + a + "number:"));
+            Yournumbers.push(b);
+            // console.log(Yournumbers);
+        }
+    
+        function repeatedNumbers(a,b,c,d,f) {
+        let arr = [a,b,c,d,f];
+        let count = [];
+
+           for (let i = 0; i < arr.length; i++) {
+                for (let j = 0; j < i; j++) {
+                    if (arr[j] == arr[i]) {
+                    
+                        if (count[arr[i]]) {
+                            count[arr[i]]++;
+                            // console.log(count);
+                        } else {
+                            count[arr[i]] = 2; 
+                        }
+                        break; 
+                
+                    }
+                    
+                }
+            }
+            for (let arr in count) {
+                console.log(arr+ ": " +count[arr]);
+            }
+
+        }
+
+        repeatedNumbers.apply(this , Yournumbers);
+
+    </script>
+</html>
