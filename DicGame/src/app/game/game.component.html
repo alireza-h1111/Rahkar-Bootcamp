@@ -1,0 +1,61 @@
+ <!-- befor entering two users -->
+<form  [formGroup]="formPre" [ngClass]="{'showing': firstUserName && secondUserName }" class="container justify-content-around form-group rounded-bottom border border-primary shadow p-2 mb-5 mt-5 p-2 w-50" [formGroup]="formPre">
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 border border-info">
+      <h3>Player 1</h3>
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Enter name" formControlName="name1">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="button"  (click)="onclick()">Set Name</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-md-6 border border-danger">
+      <h3>Player 2</h3>
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Enter name" formControlName="name2">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="button" (click)="onSubmit()">Set Name</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</form>
+
+
+  <!-- after entering two names -->
+<div [ngClass]="{'showing': !firstUserName && !secondUserName, 'winner': Winner }" class=" container rounded-bottom border border-warning shadow mt-5 w-50">
+  <div class=" row justify-content-around mb-2 mt-2 m-1 ">
+    <div class=" text-center backgroundColorForFirst col border border-warning  ">
+      <div class="">
+        {{firstUserName}}
+      </div>
+      <div class="numberPx ">
+        {{firstUserScore}}
+      </div>
+    </div>
+    <div class="col p-1 d-flex flex-column ">
+      <span class=" text-center ">number</span>
+      <button (click)="makingRanomNumber()" class="btn buttonColor"> dice </button>
+    </div>
+    <div class=" text-center backgroundColorForSecond col col border border-warning ">
+      <div class="text-center ">
+        {{secondUserName}}
+      </div>
+      <div class="numberPx">
+        {{secondUserScore}}
+      </div>
+    </div> 
+  </div>
+</div>
+
+ <!-- congragulations to winner -->
+<div [ngClass]="{'winner': !Winner, }" class="alert alert-success" role="alert">
+  <h4 class="alert-heading">Well done! {{Winner}}</h4>
+  <p>Aww yeah,</p>
+  <hr>
+  <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+</div>
