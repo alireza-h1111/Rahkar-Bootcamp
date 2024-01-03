@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="">
+        <form [formGroup]="form">
+            <div class=" input-color row mt-5 border border-warning  m-0">
+                <div class="col-lg-8 w-100 p-5">
+                    <div class="input-group mb-3">
+                        <input formControlName="title" type="text" class="form-control" placeholder=" Enter your option">
+                        <div class="input-group-append">
+                          <button (click)="gettingListOptionSubmit()" [disabled]="form.invalid" [class.btn-outline-info]="this.buttonType==0" [class.btn-outline-warning]="this.buttonType==1" class="btn btn-secondary" type="button">@if (this.buttonType==0) {Submit} @else {Update}</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </form>
+    </div>
+    <div class="row ">
+        <div class="col-lg-12 w-100 p-3" >
+            <app-listing-option
+                *ngFor="let item of list"
+                [listOption]="item"
+                (deleteOption)="deleteOption($event)"
+                (editOption)="editOption($event)"
+                (doneOption)="changeStatusIsDone($event)"
+            ></app-listing-option>
+        </div>
+    </div>
+</div>

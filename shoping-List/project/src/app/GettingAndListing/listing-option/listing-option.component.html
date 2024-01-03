@@ -1,0 +1,12 @@
+<div class="row bg-info mt-5 p-5">
+    <div class="input-group w-100 p-0">
+        <div class="col-lg-7 w-80">
+            <p [ngStyle]="{'text-decoration': listOption.isDone? 'line-through': 'none'}" >{{listOption.title}}</p>
+        </div>
+        <div class="col-auto w-20">
+          <button (click)="done()" [class.btn-success]="listOption.isDone" [class.btn-warning]="!listOption.isDone" class="btn  btn-success mx-1 " type="submit">@if (listOption.isDone) {Done} @else {UnDone}</button>
+          <button (click)="edit()" class="btn btn-warning mx-1" type="submit">Edit</button>
+          <button (click)="deleteId()" class="btn btn-danger mx-1" type="submit">Delete</button>
+        </div>
+    </div>
+</div>
