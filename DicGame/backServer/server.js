@@ -10,4 +10,3 @@ app.use("/game", routes)
 app.listen(8002, () => {
     console.log('hi');
 })
- 

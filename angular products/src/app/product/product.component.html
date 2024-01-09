@@ -8,7 +8,7 @@
                   <h5 class="card-title">{{item.names}}</h5>
                   <p class="card-text">{{item.price}}</p>
                   <span [ngIf]="item.id">
-                    <button [routerLink]="['/:id']" class="btn btn-primary">Details</button>
+                    <button [routerLink]="['/update/:id']" class="btn btn-primary">Details</button>
                   </span>
                   
                 </div>

@@ -25,7 +25,7 @@ export class ListingOptionComponent {
  }
  edit(){
   this.editOption.emit(this.listOption.id)
-  console.log(this.listOption.id)
+  console.log(this.listOption.id)  
  }
  
 }

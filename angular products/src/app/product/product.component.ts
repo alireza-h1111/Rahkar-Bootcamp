@@ -11,7 +11,9 @@ import { RouterModule , RouterOutlet } from '@angular/router';
   styleUrl: './product.component.scss',
 })
 export class ProductComponent {
+  
   items: any[] = [];
+
   constructor(public product: ProductService) {
     this.items = product.products;
     console.log(this.items);

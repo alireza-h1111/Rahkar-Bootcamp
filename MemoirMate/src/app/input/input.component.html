@@ -1,0 +1,15 @@
+
+<div class="row ">
+    <div class=" container p-5 mt-1 col-lg-12 InputGap input-color  ">
+        <form class=" " [formGroup]="form">
+            <div class=" row " dir="rtl">
+                <label><h2>دلنوشته تان را بنویسید:</h2></label>
+                <textarea rows="8px" cols="120px"  formControlName="title" class="form-control mt-2"></textarea>
+            </div>
+            <!-- <input formControlName="title" type="area" class="form-control" placeholder=" Enter your option"> -->
+            <div class="">
+                <button  (click)="gettingListOptionSubmit()" [disabled]="form.invalid" [class.btn-success]="this.buttonType==0" [class.btn-outline-warning]="this.buttonType==1" class="btn btn-secondary rounded-pill mt-3" type="button">@if (this.buttonType==0) {ثبت دلنوشته} @else {تصحیح دلنوشته}</button>
+            </div>
+        </form>
+    </div>
+</div>

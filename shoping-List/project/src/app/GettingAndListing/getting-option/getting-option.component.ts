@@ -74,6 +74,8 @@ export class GettingOptionComponent {
         this.DBservice.gettingItemsFromDB().subscribe({
             next: (data) => {                
                 this.list = data.result
+                console.log(this.list);
+                
             },
             error: (error) => {
 
@@ -115,6 +117,8 @@ export class GettingOptionComponent {
     }
     // edite option button
     editOption(optionId: number) {
+        console.log(optionId);
+        
         this.DBservice.getForEdit(optionId).subscribe({
             next: (data) => {                
                 this.form.get('title')?.setValue(data.result[0].title);

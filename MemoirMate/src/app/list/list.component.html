@@ -1,0 +1,13 @@
+<ng-container *ngFor="let item of list">
+    <div dir="rtl" class="container">
+      <div class="d-flex justify-content-between BColor rounded mt-5 p-5 flex-row justify-content-end">
+        <div class="col-lg-7 w-80">
+          <p>{{item.title}}...</p>
+        </div>
+        <div class="col-auto">
+          <fa-icon (click)="edit(item.id)" [icon]="faPen" [routerLink]="['update/:', item.id]" routerLinkActive="router-link-active"  class="btn mx-1" type="submit">Edit</fa-icon>
+          <fa-icon (click)="deleteOption(item.id)" [icon]="trashIcon" class=" btn mx-1" type="submit">Delete</fa-icon>
+        </div>
+      </div>
+    </div>
+</ng-container>   
