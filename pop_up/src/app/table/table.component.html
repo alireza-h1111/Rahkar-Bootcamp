@@ -9,33 +9,19 @@
     </div>
 
     <div>
-        <table class="table">
+        <table class="table" *ngFor="let item of usersData.data">
             <thead>
               <tr>
-                <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
+                <th scope="col">id</th>
+                <th scope="col">username</th>
+                <th scope="col">password</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>mdo</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>fat</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>twitter</td>
+                <th scope="row">{{item.id}}</th>
+                <td>{{item.username}}</td>
+                <td>{{item.password}}</td>
               </tr>
             </tbody>
         </table>

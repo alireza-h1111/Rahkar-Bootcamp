@@ -5,42 +5,37 @@ import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 
 @Component({
-    selector: 'app-form',
-    standalone: true,
-    templateUrl: './form.component.html',
-    styleUrls: ['./form.component.scss'],
-    imports: [CommonModule, FormsModule, ReactiveFormsModule, MatDialogModule]
+  selector: 'app-form',
+  standalone: true,
+  templateUrl: './form.component.html',
+  styleUrls: ['./form.component.scss'],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule, MatDialogModule]
 })
 export class FormComponent {
 
   constructor(
-    private fbuilder : FormBuilder,
-    private matDialog : MatDialog,
-    private router : Router,
-    ){}
-    
-    @Output() formSubmit = new EventEmitter<any>();
-    
-    formData: FormGroup = this.fbuilder.group({
-      name:['', Validators.required],
-      email:['',Validators.required],
-    });
-    
-    onSubmit() {
-      if (this.validateForm()) {
-        this.formSubmit.emit(this.formData);
-      } else {
-        console.log('Form is invalid');
-    }
+    private fbuilder: FormBuilder,
+    private router: Router,
+  ) { }
+
+  @Output() formSubmit = new EventEmitter<any>();
+
+  formData: FormGroup = this.fbuilder.group({
+    name: ['', Validators.required],
+    email: ['', Validators.required],
+  });
+
+  onSubmit() {
+    console.log(this.formData.value);
   }
-   
+
   validateForm(): boolean {
     return true;
   }
-  
+
 
   staying(event: boolean) {
-  throw new Error('Method not implemented.');
+    throw new Error('Method not implemented.');
   }
   navigation(event: boolean) {
     this.router.navigateByUrl('/table')
