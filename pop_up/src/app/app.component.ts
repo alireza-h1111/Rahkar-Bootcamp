@@ -7,12 +7,13 @@ import { TableComponent } from "./table/table.component";
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { LogniRegisterService } from './logni-register.service';
+import { HttpClientModule } from '@angular/common/http';
 @Component({
     selector: 'app-root',
     standalone: true,
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss'],
-    imports: [CommonModule, RouterOutlet, FormComponent, TableComponent, RegisterComponent, LoginComponent]
+    imports: [CommonModule, RouterOutlet, FormComponent, TableComponent, RegisterComponent, LoginComponent, HttpClientModule]
 })
 export class AppComponent {
     constructor( private tokenChecker: LogniRegisterService){

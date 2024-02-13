@@ -29,6 +29,6 @@ export class LoginComponent {
         this.loginService.setTokenToLocalStorage(data);
       }
     })
-  // this.router.navigateByUrl('/table')
+    this.router.navigate(['/table'])
   }
 }

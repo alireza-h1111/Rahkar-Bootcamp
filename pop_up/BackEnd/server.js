@@ -1,17 +1,16 @@
 const express = require('express');
-const  app = express();
-const routes = require('./routs/items.routes')
+const app = express();
 const cors = require('cors');
 
-const optionRoutes = require('./routs/items.routes');
+// importing routes
+const userRoutes = require('./routs/items.routes')
+const productsRoutes = require('./routs/products.routes')
 
 app.use(cors());
 app.use(express.json())
-app.use(routes);
 
-app.use("/api/user", optionRoutes)
-
-
+app.use("/api/user", userRoutes)
+app.use("/api/products", productsRoutes)
 
 app.listen(3000, () => {
     console.log('hi');

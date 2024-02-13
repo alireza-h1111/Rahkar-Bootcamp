@@ -3,6 +3,7 @@ import { Component, Output, EventEmitter } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { Router } from '@angular/router';
+import { ProductsService } from '../products.service';
 
 @Component({
   selector: 'app-form',
@@ -16,28 +17,28 @@ export class FormComponent {
   constructor(
     private fbuilder: FormBuilder,
     private router: Router,
+    private productService: ProductsService
   ) { }
 
   @Output() formSubmit = new EventEmitter<any>();
 
   formData: FormGroup = this.fbuilder.group({
     name: ['', Validators.required],
-    email: ['', Validators.required],
+    price: ['', Validators.required],
   });
 
   onSubmit() {
-    console.log(this.formData.value);
-  }
-
-  validateForm(): boolean {
-    return true;
-  }
-
-
-  staying(event: boolean) {
-    throw new Error('Method not implemented.');
-  }
-  navigation(event: boolean) {
-    this.router.navigateByUrl('/table')
+    if (this.formData.valid) {
+      this.productService.addProducts(this.formData.value).subscribe(
+        (response) => {
+          console.log(response);
+        },
+        (error) => {
+          console.error('Error adding products:', error);
+        }
+      );
+    } else {
+      console.error('Invalid form data:', this.formData.errors);
+    }
   }
 }

@@ -1,6 +1,5 @@
 const jwt = require('jsonwebtoken');
 function tokenValidator (req , res, next){
-    console.log(req.headers);
     console.log('middleware');
 
     const authorizationHeader = req.headers.authorization;

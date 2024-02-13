@@ -61,9 +61,9 @@ exports.gettingUsers= async( req , res )=>{
         })
         console.log(result);
         if(result){
-            res.status(200).json(new Respond(result, true , "success"));
+            res.status(200).json(new Respond(result, true , "successfully loaded"));
         }
     } catch (error) {
-        res.status(500).json({message:" interanl server error"})
+        res.status(500).json(new Respond(result, false , "error in server"));
     }
 }
