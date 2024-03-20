@@ -1,0 +1,12 @@
+<div class=" mt-5 row d-flex justify-content-around">
+    <div *ngFor="let item of product" class="card border-warning" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">{{item.name}}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">{{item.price}}</h6>
+          <button (click)="share()" class=" btn btn-primary " *ngIf="item.amount>0; else notifyMe" >share</button>
+        </div>
+    </div>
+</div>
+<ng-template #notifyMe>
+    <button class="btn btn-warning" (click)="notify()">Notify Me</button>
+</ng-template>
