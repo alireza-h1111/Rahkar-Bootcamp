@@ -1,0 +1,9 @@
+<div class="container m-3 border">
+  <div class="d-flex flex-column">
+    <app-tree-node *ngFor="let item of list" [node]="item" (selected)="select($event)"></app-tree-node>
+  </div>
+</div>
+
+<div class="m-5 selection-container">
+  <div class="selection-item" *ngFor="let item of selectionList">{{ item }} => </div>
+</div>

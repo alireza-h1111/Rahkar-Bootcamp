@@ -1,0 +1,18 @@
+.tree-node {
+  margin-right: 20px;
+
+  .btn {
+    margin-bottom: 5px;
+  }
+
+  .children {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: row; // فرزندان به صورت ردیفی کنار هم قرار می‌گیرند
+  }
+
+  .child-column {
+    display: flex;
+    flex-direction: column; // فرزندان زیر هم قرار می‌گیرند
+  }
+}

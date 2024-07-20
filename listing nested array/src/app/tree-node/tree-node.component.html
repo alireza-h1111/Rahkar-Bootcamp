@@ -1,0 +1,12 @@
+<div class="tree-node d-flex flex-row align-items-start">
+    <button (click)="onSelect(node)" class="btn btn-info">
+      <div class="d-inline">{{ node.name }}</div>
+      <div *ngIf="node.children && node.children.length > 0" class="d-inline">></div>
+    </button>
+  
+    <div class="children d-flex flex-column" *ngIf="expanded && node.children && node.children.length > 0">
+      <div class="child-column" *ngFor="let child of node.children">
+        <app-tree-node [node]="child" (selected)="selected.emit($event)"></app-tree-node>
+      </div>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 20px;
+}
+
+.table {
+  margin-right: 20px;
+}
+
+.btn-info {
+  margin-bottom: 5px;
+}
+
+.m-3 {
+  margin: 1rem !important;
+}
+
+.bg-warning {
+  background-color: #ffc107 !important;
+}
+
+.selection-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.selection-item {
+  margin: 5px; 
+  padding: 10px;
+  background-color: #ffc107;
+  border-radius: 5px;
+}
